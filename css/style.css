@@ -41,9 +41,8 @@ ul{
 img {
     display: block;
 }
-input,
 textarea {
-    outline:none;
+    resize: none;
 }
 .link{
     text-decoration: none;
@@ -757,8 +756,8 @@ textarea {
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-svg:hover {
-    fill: #2196F3;
-    border: 1px solid #2196F3;
+    fill: var(--acent-color);
+    border: 1px solid var(--acent-color);
 }
 .modal-svg-button{
     border: none;
@@ -784,9 +783,6 @@ textarea {
 .modal .button-modal-form:focus{
     background-color: var(--background-hero-button-hover);
 }
-textarea {
-    resize: none;
-}
 .form {
     margin-left: auto;
     margin-right: auto;
@@ -806,6 +802,7 @@ textarea {
     padding-left: 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    outline: none;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 .form-field input::placeholder {
@@ -815,8 +812,9 @@ textarea {
     font-size: 12px;
     line-height: 1.15;
     letter-spacing: 0.01em;
-    color: #757575;
+    color: var(--subtitle-text-color);
     margin-bottom: 4px;
+    outline: none;
 }
 .form-field textarea {
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -824,22 +822,27 @@ textarea {
     width: 448px;
     padding: 12px 16px;
     margin-bottom: 20px;
+    outline: none;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-field-title {
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
     text-align: center;
-    color: #212121;
+    color: var(--primary-text-color);
     margin-bottom: 12px;
 }
 .form-field-chckbox {
     margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
 }
 .form-field-chckbox label {
     font-size: 14px;
     line-height: 1.71;
-    color: #757575;
+    color: var(--subtitle-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .custom-checkbox {
     position: absolute;
@@ -858,7 +861,7 @@ textarea {
     height: 15px;
     flex-shrink: 0;
     flex-grow: 0;
-    border: 2px solid #212121;
+    border: 2px solid var(--primary-text-color);
     border-radius: 2px;
     margin-right: 8px;
     background-repeat: no-repeat;
@@ -866,16 +869,22 @@ textarea {
     background-size: 50% 50%;
 }
 .custom-checkbox:checked+label::before {
-    border-color: #2196F3;
-    background-color: #2196F3;
+    border-color: var(--acent-color);
+    background-color: var(--acent-color);
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 42 32'%3e%3cpath fill='%23fff' d='M6.263 15.205l-0.22-0.21-3.307 3.132 11.651 11.114 24.477-23.351-3.285-3.134-21.192 20.197-8.124-7.75z'/%3e%3c/svg%3e");
-    background-size: 105%;
+    /* background-size: 105%; */
+    background-size: contain;
+    background-origin: border-box;
+
+}
+.custom-checkbox:checked + label {
+    color: var(--primary-text-color);
 }
 .form-field-chckbox-silka {
     font-size: 14px;
     line-height: 1.70;
     text-decoration-line: underline;
-    color: #2196F3;
+    color: var(--acent-color);
     display: inline;
 }
 .form-field-button {
@@ -888,12 +897,12 @@ textarea {
     height: 18px;
     bottom: 11px;
     left: 12px;
-    fill: #212121;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    fill: var(--primary-text-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input:focus {
-    border-color: #2196F3;;
+    border-color: var(--acent-color);
 }
 .input:focus + .input__icon {
-    fill: #2196F3;;
+    fill: var(--acent-color);
 }
