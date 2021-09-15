@@ -231,12 +231,68 @@
                     </svg></a></li>
                 </ul>
             </div>
+            <div class="footer-forma">
+                <p class="title-footer">Подпишитесь на рассылку</p>
+                <form action="">
+                    <div class="form-field-footer-position">
+                        <div class="form-field-footer"> 
+                            <label for="mail"></label>
+                            <input type="email" name="mail" id="mail" placeholder="E-mail">
+                        </div>
+                        <button class="button-footer" type="submit">Подписаться <svg class="icon-footer">
+                            <use href="./images/lainear.svg#icon-icon-send"></use>
+                        </svg></button>
+                    </div>
+                </form>
+            </div>
         </div>    
     </footer>
     <div class="backdrop is-hidden" data-modal>
-        <div class="modal"><div class="modal-svg"><button data-modal-close class="modal-svg-button"><svg  width="11" height="11">
-            <use href="./images/close.svg#icon-close"></use>
-        </svg></button></div></div>
+        <div class="modal">
+            <form action="" class="form">
+                <p class="form-field-title">Оставьте свои данные, мы вам перезвоним</p>
+                <div class="form-field">
+                    <label for="name">Имя</label>
+                    <input type="text" class="input" name="name" id="name" placeholder="Иванов Иван">
+                    <svg class="input__icon">
+                        <use href="./images/modal-svg.svg#icon-person"></use>
+                    </svg>
+                </div>
+                <div class="form-field">
+                    <label for="tel">Телефон</label>
+                    <input type="tel" class="input" name="tel" id="tel" placeholder="8 888 888 88 88">
+                    <svg class="input__icon">
+                        <use href="./images/modal-svg.svg#icon-phone"></use>
+                    </svg>
+                </div>
+                <div class="form-field">
+                    <label for="email">Почта</label>
+                    <input type="email" class="input" name="email" id="email" placeholder="myname@mail.ru">
+                    <svg class="input__icon">
+                        <use href="./images/modal-svg.svg#icon-email"></use>
+                    </svg>
+                </div>
+                <div class="form-field">
+                    <label for="comment">Комментарий</label>
+                    <textarea name="comment" class="input" id="comment" placeholder="Введите текст" rows="5"></textarea>
+                </div>
+                <div class="form-field-chckbox">
+                    <input type="checkbox" class="custom-checkbox" name="user" value="user" id="user">
+                    <label for="user">Соглашаюсь с рассылкой и принимаю &nbsp;<a class="form-field-chckbox-silka" href="">Условия договора</a></label>
+                </div>
+                <div class="form-field-button">
+                    <button type="submit" class="button-modal-form">Отправить</button>
+                </div>
+            </form>
+            <div class="modal-svg">
+                <button data-modal-close class="modal-svg-button" type="submit">
+                    <svg  width="11" height="11">
+                    <use href="./images/close.svg#icon-close">
+                    </use>
+                    </svg>
+                </button>
+            </div>
+        </div>
     </div>
     <script src="./js/modal.js"></script>
 </body>
