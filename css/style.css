@@ -496,11 +496,12 @@ textarea {
 }
 .form-field-footer-position{
     display: flex;
+    
 }
-.form-field-footer-position .form-field-footer {
+/* .form-field-footer-position .form-field-footer {
     margin-right: 12px;
-}
-.form-field-footer input {
+} */
+.form-field-footer-position input {
     display: inline-block;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
@@ -511,6 +512,7 @@ textarea {
     padding: 15px 15px;
     background-color: transparent;
     color: #FFFFFF;
+    margin-right: 12px;
 }
 .form-field-footer input::placeholder {
     font-size: 16px;
